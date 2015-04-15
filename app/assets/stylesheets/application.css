@@ -13,3 +13,62 @@
  *= require_tree .
  *= require_self
  */
+
+html {
+    height: 100%;
+}
+
+body{
+	padding-top: 50px;
+}
+
+.alert{
+	margin-top: 10px;
+}
+
+.log{
+	background-image : url("login1.jpg");
+	background-size: cover;
+	height:633px;
+}
+
+.loginform{
+	background-color: rgba(245, 245, 245, 0.24);
+    border: 0px;
+    color:white;
+
+}
+
+.logintext{
+	color:white;
+}
+
+.lnks a{
+	color:white;
+	text-decoration: none;
+}
+
+.links a:hover {
+	color:red;
+}
+
+.register{
+	background-image : url("register.jpg");
+	background-size: cover;
+	height:100%;
+}
+
+.regform{
+	background-color: rgba(245, 245, 245, 0.24);
+    border: 0px;
+    color:white;
+}
+
+.help-block{
+	color:white;
+}
+
+.alertmsg{
+	margin: 0px;
+	border-radius: 0px;
+}

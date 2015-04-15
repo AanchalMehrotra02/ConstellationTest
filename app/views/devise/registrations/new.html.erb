@@ -1,44 +1,29 @@
-<h2>Sign up</h2>
+<div class="jumbotron register">
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-md-offset-3 col-md-6">
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name),html: {class: "well regform"}) do |f| %>
+          <%= devise_error_messages! %>
+          <h2 class="animated fadeInDown">Join Constellation Today</h2>
+          <hr>
+            <%= f.input :first_name,label: false, placeholder: 'First Name' %>
+            <%= f.input :last_name,label: false,  placeholder: 'Last Name' %>
+            <%= f.input :profile_name,label: false,  placeholder: 'Profile Name'%>
+            <%= f.input :email,label: false,  placeholder: 'email'%>
+            <% if @validatable %>
+              <em>(<%= @minimum_password_length %> characters minimum)</em>
+              <% end %><br />
+            <%= f.input :password, autocomplete: "off",label: false,  placeholder: 'Password'%>
+            <%= f.input :password_confirmation, autocomplete: "off" ,label: false,  placeholder: 'Confirm Password'%>
+            <div class="actions">
+              <%= f.button :submit , "Sign up" %>
+            </div>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name, autofocus: true %>
+          <h6>By signing up, you agree to the Terms of Service and Privacy Policy, including Cookie Use. Others will be able to find you by email or phone number when provided.</h6>
+          <% end %>
+      </div>
+      
+    </div>
   </div>
-
-  <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :profile_name%><br />
-    <%= f.text_field :profile_name, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @validatable %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
