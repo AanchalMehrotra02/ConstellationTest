@@ -1,4 +1,4 @@
-require 'test_helper'
+urequire 'test_helper'
 
 class RouteTest < ActionDispatch::IntegrationTest
   
